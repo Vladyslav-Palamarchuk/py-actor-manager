@@ -36,8 +36,8 @@ class ActorManager:
                new_last_name: str) -> None:
         cursor = self.connection.cursor()
         cursor.execute(
-            f"UPDATE {self.table_name} SET first_name = ?, last_name = ?"
-            f"WHERE id = ?",
+            f"UPDATE {self.table_name} SET first_name = ?, last_name = ?, "
+            f" WHERE id = ?",
             (new_first_name, new_last_name, pk)
 
         )
